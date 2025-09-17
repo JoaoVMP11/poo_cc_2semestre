@@ -1,24 +1,37 @@
 package exercicio2;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 
 
 public class Principal {
-	public static int elementosunicos(List<Integer> numeros) {
+	public static int elementosunicos(ArrayList<Integer> numeros) {
 
-	return numeros.size();
+		ArrayList<Integer> numerosUnicos= new ArrayList<Integer>();
+		
+		for (Integer numero : numeros) {
+			if(!numerosUnicos.contains(numero)) {
+				numerosUnicos.add(numero);
+			}
+			
+			
+		}
+	return numerosUnicos.size();
 	
 	}
 	
 	public static void main(String[] args) {
-		ArrayList<Integer> numerosunico= new ArrayList<Integer>();
-		numerosunico.add(1);
-		numerosunico.add(2);
-		numerosunico.add(2);
+		ArrayList<Integer> numeros= new ArrayList<Integer>();
+		numeros.add(1);
+		numeros.add(2);
+		numeros.add(2);
 		
-		System.out.println(elementosunicos(numerosunico));
+
+			
+		
+		
+		System.out.println(elementosunicos(numeros));
 		
 		
 		
