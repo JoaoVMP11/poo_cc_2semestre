@@ -1,5 +1,7 @@
 package exercicio1agreg;
 
+import java.util.ArrayList;
+
 public class Principal {
 
 	public static void main(String[] args) {
@@ -8,11 +10,19 @@ public class Principal {
 		l1.setAutor("fulano silva");
 		l1.setAnoPublicacao(1456);
 		
+		Livro l2 = new Livro();
+		l2.setTitulo("hahahha");
+		l2.setAutor("roger");
+		l2.setAnoPublicacao(1999);
+		
+		
 		Biblioteca b1 = new Biblioteca();
 		b1.setNome("genrica");
-		b1.setLivro(l1);
+		b1.adicionarLivro(l1);
+		b1.adicionarLivro(l2);
+		System.out.println(b1.consultaLivros());
 		
-		System.out.println(b1.getLivro().getTitulo());
+		
 	}
 	
 }
