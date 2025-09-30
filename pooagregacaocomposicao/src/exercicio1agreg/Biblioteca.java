@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Biblioteca {
 
 	private String nome;
-	private ArrayList<Livro> livro;
+	private ArrayList<Livro> livro = new ArrayList<Livro>();
 	
 	public void adicionarLivro(Livro livro) {
 		this.livro.add(livro);

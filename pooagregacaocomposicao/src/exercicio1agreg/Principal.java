@@ -20,7 +20,13 @@ public class Principal {
 		b1.setNome("genrica");
 		b1.adicionarLivro(l1);
 		b1.adicionarLivro(l2);
-		System.out.println(b1.consultaLivros());
+		
+		String autor = "";
+		for (Livro livro : b1.getLivro() ) {
+			autor = livro.getAutor();
+			System.out.println(autor);
+			
+		}
 		
 		
 	}

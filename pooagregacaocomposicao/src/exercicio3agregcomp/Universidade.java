@@ -1,18 +1,25 @@
 package exercicio3agregcomp;
 
+import java.util.ArrayList;
+
 public class Universidade {
 	
 	private String nome;
 	private int anoFundacao;
-	private Departamento departamento;
+	private ArrayList<Departamento> departamentos = new ArrayList<Departamento>();
 	
-	public Universidade (String nome, int anoFundacao, Departamento departamento) {
+	public Universidade (String nome, int anoFundacao, ArrayList<Departamento> departamentos) {
 		
 		this.nome = nome;
 		this.anoFundacao = anoFundacao;
-		this.departamento = departamento;
+		this.departamentos = departamentos;
 	}
 
+	public void addDepartamento(Departamento departamento) {
+		this.departamentos.add(departamento);
+	}
+	
+	
 	public String getNome() {
 		return nome;
 	}
@@ -29,14 +36,14 @@ public class Universidade {
 		this.anoFundacao = anoFundacao;
 	}
 
-	public Departamento getDepartamento() {
-		return departamento;
+	public ArrayList<Departamento> getDepartamentos() {
+		return departamentos;
 	}
 
-	public void setDepartamento(Departamento departamento) {
-		this.departamento = departamento;
+	public void setDepartamentos(ArrayList<Departamento> departamentos) {
+		this.departamentos = departamentos;
 	}
-	
-	
 
+
+	
 }
